@@ -1,12 +1,12 @@
 Summary:	GNOME Partition Editor
 Summary(pl):	Edytor partycji dla GNOME
 Name:		gparted
-Version:	0.0.6
+Version:	0.0.7
 Release:	1
 License:	GPL
 Group:		Applications/System
 Source0:	http://dl.sourceforge.net/gparted/%{name}-%{version}.tar.bz2
-# Source0-md5:	d8be5152e6ebc89513127a59bfe93258
+# Source0-md5:	d3b5352d09ee5bf3960631bd66218061
 Patch0:		%{name}-desktop.patch
 URL:		http://gparted.sourceforge.net/
 BuildRequires:	autoconf
@@ -27,7 +27,7 @@ GParted jest graficzn± nak³adk± na parted. Program umo¿liwia miêdzy
 innymi tworzenie, zmianê rozmiaru, przenoszenie i kopiowanie partycji.
 
 %prep
-%setup -q -n %{name}
+%setup -q
 %patch0 -p1
 
 %build
