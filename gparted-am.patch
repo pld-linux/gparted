@@ -1,0 +1,14 @@
+diff -urN aa/gparted-0.0.3/Makefile.am gparted-0.0.3/Makefile.am
+--- aa/gparted-0.0.3/Makefile.am	2004-08-26 15:35:01.000000000 +0200
++++ gparted-0.0.3/Makefile.am	2004-08-29 19:35:34.192959768 +0200
+@@ -8,10 +8,8 @@
+ gparteddocdir = ${prefix}/doc/GParted
+ gparteddoc_DATA = \
+ 	README\
+-	COPYING\
+ 	AUTHORS\
+ 	ChangeLog\
+-	INSTALL\
+ 	NEWS\
+ 	TODO
+ 
