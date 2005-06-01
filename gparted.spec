@@ -12,6 +12,8 @@ URL:		http://gparted.sourceforge.net/
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	gtkmm-devel >= 2.4.0
+BuildRequires:	intltool
+BuildRequires:	libstdc++-devel
 BuildRequires:	libtool
 BuildRequires:	parted-devel >= 1.6.13
 BuildRequires:	pkgconfig
