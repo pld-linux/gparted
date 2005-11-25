@@ -1,14 +1,12 @@
-%define		_pre	pre2
 Summary:	GNOME Partition Editor
 Summary(pl):	Edytor partycji dla GNOME
 Name:		gparted
 Version:	0.0.9
-Release:	0.%{_pre}.2
+Release:	1
 License:	GPL
 Group:		Applications/System
-#Source0:	http://dl.sourceforge.net/gparted/%{name}-%{version}.tar.bz2
-Source0:	http://gparted.sourceforge.net/%{name}-%{version}%{_pre}.tar.bz2
-# Source0-md5:	dd6e336e4eeee8265594aef4f73d1b0c
+Source0:	http://dl.sourceforge.net/gparted/%{name}-%{version}.tar.bz2
+# Source0-md5:	0f36fc93e1908418be0b99c5db7ac184
 Patch0:		%{name}-desktop.patch
 URL:		http://gparted.sourceforge.net/
 BuildRequires:	autoconf
@@ -31,7 +29,7 @@ GParted jest graficzn± nak³adk± na parted. Program umo¿liwia miêdzy
 innymi tworzenie, zmianê rozmiaru, przenoszenie i kopiowanie partycji.
 
 %prep
-%setup -qn %{name}
+%setup -q
 %patch0 -p1
 
 %build
@@ -60,4 +58,5 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc AUTHORS ChangeLog
 %attr(755,root,root) %{_bindir}/*
-%{_desktopdir}/*
+%{_desktopdir}/*.desktop
+%{_pixmapsdir}/*.png
