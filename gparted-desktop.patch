@@ -6,5 +6,5 @@ diff -urN gparted-0.0.5.orig/gparted.desktop.in gparted-0.0.5/gparted.desktop.in
  Terminal=false
  Type=Application
 -Categories=GNOME;Application;System;
-+Categories=GTK;GNOME;System;Filesystem;
++Categories=GTK;System;Filesystem;
  StartupNotify=true
