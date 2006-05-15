@@ -11,6 +11,7 @@ Patch0:		%{name}-desktop.patch
 URL:		http://gparted.sourceforge.net/
 BuildRequires:	autoconf
 BuildRequires:	automake
+BuildRequires:	gettext-devel
 BuildRequires:	gtkmm-devel >= 2.4.0
 BuildRequires:	intltool
 BuildRequires:	libstdc++-devel
