@@ -1,5 +1,5 @@
 Summary:	GNOME Partition Editor
-Summary(pl):	Edytor partycji dla GNOME
+Summary(pl.UTF-8):   Edytor partycji dla GNOME
 Name:		gparted
 Version:	0.3.3
 Release:	1
@@ -26,9 +26,9 @@ GParted stands for GNOME Partition Editor and is a graphical frontend
 to parted. Among other features it supports creating, resizing, moving
 and copying of partitions.
 
-%description -l pl
-GParted jest graficzn± nak³adk± na parted. Program umo¿liwia miêdzy
-innymi tworzenie, zmianê rozmiaru, przenoszenie i kopiowanie partycji.
+%description -l pl.UTF-8
+GParted jest graficznÄ… nakÅ‚adkÄ… na parted. Program umoÅ¼liwia miÄ™dzy
+innymi tworzenie, zmianÄ™ rozmiaru, przenoszenie i kopiowanie partycji.
 
 %prep
 %setup -q
