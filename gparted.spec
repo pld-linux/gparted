@@ -1,5 +1,5 @@
 Summary:	GNOME Partition Editor
-Summary(pl.UTF-8):   Edytor partycji dla GNOME
+Summary(pl.UTF-8):	Edytor partycji dla GNOME
 Name:		gparted
 Version:	0.3.3
 Release:	1
