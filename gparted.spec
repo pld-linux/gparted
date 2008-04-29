@@ -1,24 +1,34 @@
 Summary:	GNOME Partition Editor
 Summary(pl.UTF-8):	Edytor partycji dla GNOME
 Name:		gparted
-Version:	0.3.3
-Release:	6
-License:	GPL
-Group:		Applications/System
+Version:	0.3.7
+Release:	1
+License:	GPL v2
+Group:		X11/Applications
 Source0:	http://dl.sourceforge.net/gparted/%{name}-%{version}.tar.bz2
-# Source0-md5:	f3d16ccfda72fa1dac9fa1ff9ded2c42
+# Source0-md5:	6a96ab9b8871a58b6ca74941c30ab812
 Patch0:		%{name}-desktop.patch
 URL:		http://gparted.sourceforge.net/
 BuildRequires:	autoconf
-BuildRequires:	automake
+BuildRequires:	automake >= 1:1.9
 BuildRequires:	gettext-devel
-BuildRequires:	gtkmm-devel >= 2.4.0
-BuildRequires:	intltool
+BuildRequires:	gtkmm-devel >= 2.10.0
+BuildRequires:	intltool >= 0.36.0
 BuildRequires:	libstdc++-devel
 BuildRequires:	libtool
+BuildRequires:	libuuid-devel
 BuildRequires:	parted-devel >= 1.7.1
 BuildRequires:	pkgconfig
+Requires:	hal >= 0.5.10
 Requires:	parted >= 1.7.1
+Suggests:	dosfstools
+Suggests:	e2fsprogs
+Suggests:	hfsutils
+Suggests:	jfsutils
+Suggests:	ntfsprogs
+Suggests:	reiser4progs
+Suggests:	reiserfsprogs
+Suggests:	xfsprogs
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -39,6 +49,7 @@ innymi tworzenie, zmianę rozmiaru, przenoszenie i kopiowanie partycji.
 %{__libtoolize}
 %{__aclocal}
 %{__autoconf}
+%{__autoheader}
 %{__automake}
 %configure
 %{__make}
@@ -49,9 +60,6 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
-# Are these includes required?
-rm -rf $RPM_BUILD_ROOT%{_includedir}/GParted
-
 %find_lang %{name}
 
 %clean
@@ -59,7 +67,9 @@ rm -rf $RPM_BUILD_ROOT
 
 %files -f %{name}.lang
 %defattr(644,root,root,755)
-%doc AUTHORS ChangeLog
-%attr(755,root,root) %{_bindir}/*
-%{_desktopdir}/*.desktop
-%{_pixmapsdir}/*.png
+%doc AUTHORS ChangeLog NEWS README
+%attr(755,root,root) %{_sbindir}/gparted
+%attr(755,root,root) %{_sbindir}/gpartedbin
+%{_desktopdir}/gparted.desktop
+%{_pixmapsdir}/gparted.png
+%{_mandir}/man8/gparted.8*
