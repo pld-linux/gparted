@@ -1,10 +1,10 @@
-diff -urN gparted-0.0.5.orig/gparted.desktop.in gparted-0.0.5/gparted.desktop.in
---- gparted-0.0.5.orig/gparted.desktop.in	2004-10-01 01:06:23.840158368 +0200
-+++ gparted-0.0.5/gparted.desktop.in	2004-10-01 01:08:11.499791616 +0200
+diff -urN gparted-0.3.7/gparted.desktop.in.in gparted-0.3.7.new/gparted.desktop.in.in
+--- gparted-0.3.7/gparted.desktop.in.in	2008-04-29 16:17:29.000000000 +0200
++++ gparted-0.3.7.new/gparted.desktop.in.in	2008-04-29 19:44:11.000000000 +0200
 @@ -5,5 +5,5 @@
- Exec=gparted
+ Icon=gparted
  Terminal=false
  Type=Application
--Categories=GNOME;Application;System;
+-Categories=GNOME;System;
 +Categories=GTK;System;Filesystem;
  StartupNotify=true
