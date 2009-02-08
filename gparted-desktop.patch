@@ -5,6 +5,6 @@ diff -urN gparted-0.3.7/gparted.desktop.in.in gparted-0.3.7.new/gparted.desktop.
  Icon=gparted
  Terminal=false
  Type=Application
--Categories=GNOME;System;
+-Categories=GNOME;System;Filesystem;
 +Categories=GTK;System;Filesystem;
  StartupNotify=true
