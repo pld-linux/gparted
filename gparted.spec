@@ -26,6 +26,7 @@ Suggests:	dosfstools
 Suggests:	e2fsprogs
 Suggests:	hfsutils
 Suggests:	jfsutils
+Suggests:	mtools
 Suggests:	ntfsprogs
 Suggests:	reiser4progs
 Suggests:	reiserfsprogs
