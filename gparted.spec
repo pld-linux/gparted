@@ -10,12 +10,15 @@ Source0:	http://downloads.sourceforge.net/gparted/%{name}-%{version}.tar.bz2
 URL:		http://gparted.sourceforge.net/
 BuildRequires:	autoconf
 BuildRequires:	automake >= 1:1.9
+BuildRequires:	docbook-dtd412-xml
 BuildRequires:	gettext-devel
+BuildRequires:	gnome-doc-utils
 BuildRequires:	gtkmm-devel >= 2.10.0
 BuildRequires:	intltool >= 0.36.0
 BuildRequires:	libstdc++-devel
 BuildRequires:	libtool
 BuildRequires:	libuuid-devel
+BuildRequires:	libxml2-progs
 BuildRequires:	parted-devel >= 1.7.1
 BuildRequires:	pkgconfig
 BuildRequires:	rpmbuild(find_lang) >= 1.23
