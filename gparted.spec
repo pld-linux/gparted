@@ -8,15 +8,11 @@ Group:		X11/Applications
 Source0:	http://downloads.sourceforge.net/gparted/%{name}-%{version}.tar.bz2
 # Source0-md5:	29adfe33df34c03b7f800ce5374e957a
 URL:		http://gparted.sourceforge.net/
-BuildRequires:	autoconf
-BuildRequires:	automake >= 1:1.9
 BuildRequires:	docbook-dtd412-xml
 BuildRequires:	gettext-devel
 BuildRequires:	gnome-doc-utils
 BuildRequires:	gtkmm-devel >= 2.10.0
-BuildRequires:	intltool >= 0.36.0
 BuildRequires:	libstdc++-devel
-BuildRequires:	libtool
 BuildRequires:	libuuid-devel
 BuildRequires:	libxml2-progs
 BuildRequires:	parted-devel >= 1.7.1
@@ -47,13 +43,8 @@ innymi tworzenie, zmianę rozmiaru, przenoszenie i kopiowanie partycji.
 %setup -q
 
 %build
-%{__intltoolize}
-%{__libtoolize}
-%{__aclocal}
-%{__autoconf}
-%{__autoheader}
-%{__automake}
 %configure
+
 %{__make}
 
 %install
