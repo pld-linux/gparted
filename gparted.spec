@@ -1,12 +1,12 @@
 Summary:	GNOME Partition Editor
 Summary(pl.UTF-8):	Edytor partycji dla GNOME
 Name:		gparted
-Version:	0.8.1
+Version:	0.9.0
 Release:	1
 License:	GPL v2+
 Group:		X11/Applications
 Source0:	http://downloads.sourceforge.net/gparted/%{name}-%{version}.tar.bz2
-# Source0-md5:	ba3a434a259ae2ddcfc7f7488ee648ef
+# Source0-md5:	56ec9c80413ba2d8ad0193bfc2b5a99f
 URL:		http://gparted.sourceforge.net/
 BuildRequires:	docbook-dtd412-xml
 BuildRequires:	gettext-devel
