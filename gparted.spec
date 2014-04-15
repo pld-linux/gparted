@@ -1,12 +1,12 @@
 Summary:	GNOME Partition Editor
 Summary(pl.UTF-8):	Edytor partycji dla GNOME
 Name:		gparted
-Version:	0.16.1
+Version:	0.18.0
 Release:	1
 License:	GPL v2+
 Group:		X11/Applications
 Source0:	http://downloads.sourceforge.net/gparted/%{name}-%{version}.tar.bz2
-# Source0-md5:	3f399bff031b5ce14d11a8c346f4b89c
+# Source0-md5:	c4c928de08519c923abaa5a099881241
 URL:		http://gparted.sourceforge.net/
 BuildRequires:	autoconf >= 2.50
 BuildRequires:	automake >= 1:1.9
@@ -63,7 +63,10 @@ innymi tworzenie, zmianę rozmiaru, przenoszenie i kopiowanie partycji.
 %{__autoheader}
 %{__automake}
 %configure \
-	GKSUPROG=/usr/bin/gksu
+	GKSUPROG=/usr/bin/gksu \
+	--enable-libparted-dmraid \
+	--enable-online-resize
+
 %{__make}
 
 %install
@@ -91,3 +94,4 @@ rm -rf $RPM_BUILD_ROOT
 %{_desktopdir}/gparted.desktop
 %{_mandir}/man8/gparted.8*
 %{_iconsdir}/*/*/*/gparted.*
+%{_datadir}/appdata/gparted.appdata.xml
