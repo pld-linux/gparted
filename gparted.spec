@@ -1,33 +1,35 @@
 Summary:	GNOME Partition Editor
 Summary(pl.UTF-8):	Edytor partycji dla GNOME
 Name:		gparted
-Version:	0.18.0
+Version:	0.24.0
 Release:	1
 License:	GPL v2+
 Group:		X11/Applications
 Source0:	http://downloads.sourceforge.net/gparted/%{name}-%{version}.tar.bz2
-# Source0-md5:	c4c928de08519c923abaa5a099881241
+# Source0-md5:	b8480274c68876acff5965d4346710e7
 URL:		http://gparted.sourceforge.net/
 BuildRequires:	autoconf >= 2.50
 BuildRequires:	automake >= 1:1.9
 BuildRequires:	docbook-dtd412-xml
 BuildRequires:	gettext-tools
 BuildRequires:	glib2-devel
-BuildRequires:	glibmm-devel >= 2.14
+BuildRequires:	glibmm-devel >= 2.45.40
 BuildRequires:	gnome-doc-utils
-BuildRequires:	gtkmm-devel >= 2.16.0
+BuildRequires:	gtkmm-devel >= 2.22.0
 BuildRequires:	intltool
 BuildRequires:	libstdc++-devel
 BuildRequires:	libtool
 BuildRequires:	libuuid-devel
 BuildRequires:	libxml2-progs
-BuildRequires:	parted-devel >= 1.7.1
+BuildRequires:	parted-devel >= 3.2
 BuildRequires:	pkgconfig
 BuildRequires:	rpmbuild(find_lang) >= 1.23
 BuildRequires:	rpmbuild(macros) >= 1.311
 Requires:	gksu
+Requires:	glibmm >= 2.45.40
+Requires:	gtkmm >= 2.22.0
 Requires:	hicolor-icon-theme
-Requires:	parted >= 1.7.1
+Requires:	parted >= 3.2
 Suggests:	btrfs-progs
 Suggests:	dosfstools
 Suggests:	e2fsprogs
@@ -95,3 +97,4 @@ rm -rf $RPM_BUILD_ROOT
 %{_mandir}/man8/gparted.8*
 %{_iconsdir}/*/*/*/gparted.*
 %{_datadir}/appdata/gparted.appdata.xml
+%{_pixmapsdir}/gparted.png
