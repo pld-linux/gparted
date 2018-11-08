@@ -1,12 +1,12 @@
 Summary:	GNOME Partition Editor
 Summary(pl.UTF-8):	Edytor partycji dla GNOME
 Name:		gparted
-Version:	0.30.0
+Version:	0.32.0
 Release:	1
 License:	GPL v2+
 Group:		X11/Applications
 Source0:	http://downloads.sourceforge.net/gparted/%{name}-%{version}.tar.gz
-# Source0-md5:	09b12d3831e91b26ec8726b00eecd43d
+# Source0-md5:	df4fe0350ba55cee6fddae289bd9d3f1
 URL:		http://gparted.sourceforge.net/
 BuildRequires:	autoconf >= 2.50
 BuildRequires:	automake >= 1:1.9
@@ -16,8 +16,9 @@ BuildRequires:	glib2-devel
 BuildRequires:	glibmm-devel >= 2.45.40
 BuildRequires:	gnome-doc-utils
 BuildRequires:	gtkmm-devel >= 2.22.0
-BuildRequires:	intltool
-BuildRequires:	libstdc++-devel
+BuildRequires:	intltool >= 0.36.0
+BuildRequires:	libsigc++-devel >= 1:2.5.1
+BuildRequires:	libstdc++-devel >= 6:4.7
 BuildRequires:	libtool
 BuildRequires:	libuuid-devel
 BuildRequires:	libxml2-progs
@@ -29,6 +30,7 @@ Requires:	gksu
 Requires:	glibmm >= 2.45.40
 Requires:	gtkmm >= 2.22.0
 Requires:	hicolor-icon-theme
+Requires:	libsigc++ >= 1:2.5.1
 Requires:	parted >= 3.2
 Suggests:	btrfs-progs
 Suggests:	dosfstools
@@ -94,6 +96,7 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/gparted
 %attr(755,root,root) %{_sbindir}/gpartedbin
 %{_desktopdir}/gparted.desktop
-%{_mandir}/man8/gparted.8*
-%{_iconsdir}/*/*/*/gparted.*
+%{_iconsdir}/hicolor/*/apps/gparted.*
 %{_datadir}/appdata/gparted.appdata.xml
+%{_datadir}/polkit-1/actions/org.gnome.gparted.policy
+%{_mandir}/man8/gparted.8*
