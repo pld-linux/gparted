@@ -1,12 +1,12 @@
 Summary:	GNOME Partition Editor
 Summary(pl.UTF-8):	Edytor partycji dla GNOME
 Name:		gparted
-Version:	1.0.0
+Version:	1.2.0
 Release:	1
 License:	GPL v2+
 Group:		X11/Applications
 Source0:	http://downloads.sourceforge.net/gparted/%{name}-%{version}.tar.gz
-# Source0-md5:	025160c642b64148818761a1a4f599eb
+# Source0-md5:	15166c40d7ca119432454475294abecf
 URL:		http://gparted.sourceforge.net/
 BuildRequires:	autoconf >= 2.50
 BuildRequires:	automake >= 1:1.9
@@ -17,6 +17,7 @@ BuildRequires:	glibmm-devel >= 2.45.40
 BuildRequires:	gnome-doc-utils
 BuildRequires:	gtkmm-devel >= 2.22.0
 BuildRequires:	intltool >= 0.36.0
+BuildRequires:	itstool
 BuildRequires:	libsigc++-devel >= 1:2.5.1
 BuildRequires:	libstdc++-devel >= 6:4.7
 BuildRequires:	libtool
@@ -26,7 +27,6 @@ BuildRequires:	parted-devel >= 3.2
 BuildRequires:	pkgconfig
 BuildRequires:	rpmbuild(find_lang) >= 1.23
 BuildRequires:	rpmbuild(macros) >= 1.311
-Requires:	gksu
 Requires:	glibmm >= 2.45.40
 Requires:	gtkmm >= 2.22.0
 Requires:	hicolor-icon-theme
@@ -60,14 +60,7 @@ innymi tworzenie, zmianę rozmiaru, przenoszenie i kopiowanie partycji.
 %setup -q
 
 %build
-%{__intltoolize}
-%{__libtoolize}
-%{__aclocal} -I m4
-%{__autoconf}
-%{__autoheader}
-%{__automake}
 %configure \
-	GKSUPROG=/usr/bin/gksu \
 	--enable-libparted-dmraid \
 	--enable-online-resize
 
