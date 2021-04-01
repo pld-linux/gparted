@@ -15,7 +15,7 @@ BuildRequires:	gettext-tools
 BuildRequires:	glib2-devel
 BuildRequires:	glibmm-devel >= 2.45.40
 BuildRequires:	gnome-doc-utils
-BuildRequires:	gtkmm-devel >= 2.22.0
+BuildRequires:	gtkmm3-devel > 3.4.0
 BuildRequires:	intltool >= 0.36.0
 BuildRequires:	itstool
 BuildRequires:	libsigc++-devel >= 1:2.5.1
@@ -28,7 +28,7 @@ BuildRequires:	pkgconfig
 BuildRequires:	rpmbuild(find_lang) >= 1.23
 BuildRequires:	rpmbuild(macros) >= 1.311
 Requires:	glibmm >= 2.45.40
-Requires:	gtkmm >= 2.22.0
+Requires:	gtkmm3 >= 3.4.0
 Requires:	hicolor-icon-theme
 Requires:	libsigc++ >= 1:2.5.1
 Requires:	parted >= 3.2
