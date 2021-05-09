@@ -1,12 +1,12 @@
 Summary:	GNOME Partition Editor
 Summary(pl.UTF-8):	Edytor partycji dla GNOME
 Name:		gparted
-Version:	1.2.0
+Version:	1.3.0
 Release:	1
 License:	GPL v2+
 Group:		X11/Applications
 Source0:	http://downloads.sourceforge.net/gparted/%{name}-%{version}.tar.gz
-# Source0-md5:	15166c40d7ca119432454475294abecf
+# Source0-md5:	cbc88cb23c1eb77cc956a625942c63a4
 URL:		http://gparted.sourceforge.net/
 BuildRequires:	autoconf >= 2.50
 BuildRequires:	automake >= 1:1.9
@@ -24,8 +24,8 @@ BuildRequires:	libtool
 BuildRequires:	libuuid-devel
 BuildRequires:	libxml2-progs
 BuildRequires:	parted-devel >= 3.2
-BuildRequires:	polkit
 BuildRequires:	pkgconfig
+BuildRequires:	polkit
 BuildRequires:	rpmbuild(find_lang) >= 1.23
 BuildRequires:	rpmbuild(macros) >= 1.311
 Requires:	glibmm >= 2.45.40
@@ -88,7 +88,7 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc AUTHORS ChangeLog NEWS README
 %attr(755,root,root) %{_bindir}/gparted
-%attr(755,root,root) %{_sbindir}/gpartedbin
+%attr(755,root,root) %{_prefix}/libexec/gpartedbin
 %{_desktopdir}/gparted.desktop
 %{_iconsdir}/hicolor/*/apps/gparted.*
 %{_datadir}/appdata/gparted.appdata.xml
