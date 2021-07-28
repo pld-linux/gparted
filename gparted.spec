@@ -14,8 +14,7 @@ BuildRequires:	docbook-dtd412-xml
 BuildRequires:	gettext-tools
 BuildRequires:	glib2-devel
 BuildRequires:	glibmm-devel >= 2.45.40
-BuildRequires:	gnome-doc-utils
-BuildRequires:	gtkmm3-devel > 3.4.0
+BuildRequires:	gtkmm3-devel > 3.22.0
 BuildRequires:	intltool >= 0.36.0
 BuildRequires:	itstool
 BuildRequires:	libsigc++-devel >= 1:2.5.1
@@ -25,14 +24,15 @@ BuildRequires:	libuuid-devel
 BuildRequires:	libxml2-progs
 BuildRequires:	parted-devel >= 3.2
 BuildRequires:	pkgconfig
-BuildRequires:	polkit
+BuildRequires:	polkit >= 0.102
 BuildRequires:	rpmbuild(find_lang) >= 1.23
 BuildRequires:	rpmbuild(macros) >= 1.311
 Requires:	glibmm >= 2.45.40
-Requires:	gtkmm3 >= 3.4.0
+Requires:	gtkmm3 >= 3.22.0
 Requires:	hicolor-icon-theme
 Requires:	libsigc++ >= 1:2.5.1
 Requires:	parted >= 3.2
+Requires:	polkit >= 0.102
 Suggests:	btrfs-progs
 Suggests:	dosfstools
 Suggests:	e2fsprogs
@@ -73,7 +73,7 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
-%find_lang %{name} --with-gnome --with-omf
+%find_lang %{name} --with-gnome
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -88,7 +88,7 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc AUTHORS ChangeLog NEWS README
 %attr(755,root,root) %{_bindir}/gparted
-%attr(755,root,root) %{_prefix}/libexec/gpartedbin
+%attr(755,root,root) %{_libexecdir}/gpartedbin
 %{_desktopdir}/gparted.desktop
 %{_iconsdir}/hicolor/*/apps/gparted.*
 %{_datadir}/appdata/gparted.appdata.xml
