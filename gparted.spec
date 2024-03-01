@@ -27,6 +27,7 @@ BuildRequires:	pkgconfig
 BuildRequires:	polkit >= 0.102
 BuildRequires:	rpmbuild(find_lang) >= 1.23
 BuildRequires:	rpmbuild(macros) >= 1.311
+Requires(post,postun):	desktop-file-utils
 Requires:	glibmm >= 2.45.40
 Requires:	gtkmm3 >= 3.22.0
 Requires:	hicolor-icon-theme
@@ -83,9 +84,11 @@ rm -rf $RPM_BUILD_ROOT
 
 %post
 %update_icon_cache hicolor
+%update_desktop_database_post
 
 %postun
 %update_icon_cache hicolor
+%update_desktop_database_postun
 
 %files -f %{name}.lang
 %defattr(644,root,root,755)
