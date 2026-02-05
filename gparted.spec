@@ -18,7 +18,7 @@ BuildRequires:	gtkmm3-devel > 3.22.0
 BuildRequires:	intltool >= 0.36.0
 BuildRequires:	itstool
 BuildRequires:	libsigc++-devel >= 1:2.5.1
-BuildRequires:	libstdc++-devel >= 6:4.8.1
+BuildRequires:	libstdc++-devel >= 6:5
 BuildRequires:	libtool
 BuildRequires:	libuuid-devel
 BuildRequires:	libxml2-progs
