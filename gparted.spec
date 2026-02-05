@@ -25,6 +25,8 @@ BuildRequires:	libxml2-progs
 BuildRequires:	parted-devel >= 3.2
 BuildRequires:	pkgconfig
 BuildRequires:	polkit >= 0.102
+# gettext ITS rules
+BuildRequires:	polkit-devel >= 0.102
 BuildRequires:	rpmbuild(find_lang) >= 1.23
 BuildRequires:	rpmbuild(macros) >= 1.311
 Requires(post,postun):	desktop-file-utils
